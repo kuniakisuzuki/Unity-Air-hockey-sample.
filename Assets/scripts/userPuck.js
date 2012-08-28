@@ -1,21 +1,18 @@
 #pragma strict
-//ballに当たるか、一定時間経ったら消す
-//var se1:AudioClip;
+//created user finger action. Delete this object when hit puck object or after a certain period of time.
 
 var contorller:GameObject;
 
 private var i = 0;
 
 
-//private var myAudio:AudioSource;
-
 
 function Start () {
-	//myAudio = audio;
+
 }
 
 function Update () {
-	if(i++ >= 6){
+	if(i++ >= 8){
 		Destroy(gameObject);
 	}
 }
@@ -23,11 +20,8 @@ function Update () {
 
 function OnCollisionEnter(collisionInfo:Collision){
 
-	//print("asdasdasd");
 	if(collisionInfo.gameObject.tag == "ball"){
 	
-		//myAudio.PlayOneShot(se1);
-		
 		var contorollerObj:GameObject = GameObject.FindGameObjectWithTag("contoroller");
 		contorollerObj.SendMessage("playSE");
 		

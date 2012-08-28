@@ -1,6 +1,5 @@
 #pragma strict
 
-
 static var score:int;
 
 
